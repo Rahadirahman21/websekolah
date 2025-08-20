@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Profils extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'logo',
+        'nama_sekolah',
+        'nama_kepsek',
+        'sejarah',
+        'visi',
+        'misi',
+    ];
+}
