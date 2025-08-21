@@ -17,7 +17,7 @@ class RombelsTable
                 TextColumn::make('jurusan')->searchable(),
                 TextColumn::make('nama_kelas')->searchable(),
                 TextColumn::make('jml_perempuan')->searchable(),
-                TextColumn::make('jml_laki-laki')->searchable(),
+                TextColumn::make('jml_laki_laki')->searchable(),
             ])
             ->filters([
                 //

@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
+
 <section>
-    <div class="h-100 bg-blue-500">
         <div class="carousel w-full">
   <div id="slide1" class="carousel-item relative w-full">
     <img
@@ -39,8 +39,30 @@
     </div>
   </div>
 </div>
-    </div>
+    
 </section>
-<h1>Halaman Eskul</h1>
+<section >
+    <div class="flex items-center justify-center my-5">
+        <h1 class="text-center font-bold text-2xl font">Ekstrakulikuler SMKN 4 Tasikmalaya</h1>
+    </div>
+    <div class="flex justify-center gap-10 my-10">
+
+        <?php $__currentLoopData = $jurusan; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $jurusan): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <div class="card bg-blue-100 w-96 shadow-sm ">
+            <figure>
+                <img src="<?php echo e(asset('storage/'. $jurusan->foto)); ?>" alt="" width="100px" class=" rounded-full my-5">
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title"><?php echo e($jurusan->nama_jurusan); ?></h2>
+                <p><?php echo e($jurusan->pengertian); ?></p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Selengkapnya</button>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    </div>
+
+</section>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.layout', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\laragon\www\websekolah\resources\views/eskul.blade.php ENDPATH**/ ?>

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('jurusan');
             $table->string('nama_kelas');
             $table->string('jml_perempuan');
-            $table->string('jml_laki-laki');
+            $table->string('jml_laki_laki');
             $table->timestamps();
         });
     }

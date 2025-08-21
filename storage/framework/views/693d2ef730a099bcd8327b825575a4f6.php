@@ -43,18 +43,17 @@
 </section>
 <section >
     <div class="flex items-center justify-center my-5">
-        <h1 class="text-center font-bold text-2xl font">Kompetensi Keahlian SMKN 4 Tasikmalaya</h1>
+        <h1 class="text-center font-bold text-2xl font">Rombongan Belajar SMKN 4 Tasikmalaya</h1>
     </div>
     <div class="flex justify-center gap-10 my-10">
 
-        <?php $__currentLoopData = $jurusan; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $jurusan): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <?php $__currentLoopData = $rombel; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $rombel): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <div class="card bg-blue-100 w-96 shadow-sm ">
-            <figure>
-                <img src="<?php echo e(asset('storage/'. $jurusan->foto)); ?>" alt="" width="100px" class=" rounded-full my-5">
-            </figure>
+            
             <div class="card-body">
-                <h2 class="card-title"><?php echo e($jurusan->nama_jurusan); ?></h2>
-                <p><?php echo e($jurusan->pengertian); ?></p>
+                <h2 class="card-title"><?php echo e($rombel->nama_kelas); ?></h2>
+                <p><?php echo e($rombel->jml_perempuan); ?></p>
+                <p><?php echo e($rombel->jml_laki_laki); ?></p>
                 <div class="card-actions justify-end">
                     <button class="btn btn-primary">Selengkapnya</button>
                 </div>

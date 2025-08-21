@@ -1,8 +1,8 @@
 @extends('layouts.layout')
 
 @section('content')
+
 <section>
-    <div class="h-100 bg-blue-500">
         <div class="carousel w-full">
   <div id="slide1" class="carousel-item relative w-full">
     <img
@@ -41,7 +41,29 @@
     </div>
   </div>
 </div>
-    </div>
+    
 </section>
-<h1>Halaman Sarpras</h1>
+<section >
+    <div class="flex items-center justify-center my-5">
+        <h1 class="text-center font-bold text-2xl font">Sarana Prasarana SMKN 4 Tasikmalaya</h1>
+    </div>
+    <div class="flex justify-center gap-10 my-10">
+
+        @foreach ($jurusan as $jurusan)
+        <div class="card bg-blue-100 w-96 shadow-sm ">
+            <figure>
+                <img src="{{ asset('storage/'. $jurusan->foto) }}" alt="" width="100px" class=" rounded-full my-5">
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">{{ $jurusan->nama_jurusan }}</h2>
+                <p>{{ $jurusan->pengertian }}</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Selengkapnya</button>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
+
+</section>
 @endsection

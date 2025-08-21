@@ -23,7 +23,7 @@
             </div>
             <div class="hidden md:block">
               <ul class="flex items-center space-x-8">
-                <li><a href="{{ route('admin') }}" class="text-white">Home</a></li>
+                <li><a href="{{ route('welcome') }}" class="text-white">Home</a></li>
                 <li><a href="{{ route('profil') }}" class="text-white">Profil</a></li>
                 <li><a href="{{ route('jurusan') }}" class="text-white">Kompetensi Keahlian</a></li>
                 <li><a href="{{ route('sarpras') }}" class="text-white">Sarana Prasarana</a></li>
@@ -41,7 +41,7 @@
           </div>
           <div class="mobile-menu hidden md:hidden">
             <ul class="mt-4 space-y-4">
-              <li><a href="{{ route('admin') }}" class="block px-4 py-2 text-white bg-gray-900 rounded">Home</a></li>
+              <li><a href="{{ route('welcome') }}" class="block px-4 py-2 text-white bg-gray-900 rounded">Home</a></li>
               <li><a href="{{ route('profil') }}" class="block px-4 py-2 text-white bg-gray-900 rounded">Profil</a></li>
               <li><a href="{{ route('jurusan') }}" class="block px-4 py-2 text-white bg-gray-900 rounded">Kompetensi Keahlian</a></li>
               <li><a href="{{ route('eskul') }}" class="block px-4 py-2 text-white bg-gray-900 rounded">Ekstrakulikuler</a></li>

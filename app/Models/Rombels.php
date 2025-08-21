@@ -13,6 +13,6 @@ class Rombels extends Model
         'jurusan',
         'nama_kelas',
         'jml_perempuan',
-        'jml_laki-laki',
+        'jml_laki_laki',
     ];
 }

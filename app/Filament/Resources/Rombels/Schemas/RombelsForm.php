@@ -22,7 +22,7 @@ class RombelsForm
                 ]),
                 TextInput::make('nama_kelas')->required(),
                 TextInput::make('jml_perempuan')->required(),
-                TextInput::make('jml_laki-laki')->required(),
+                TextInput::make('jml_laki_laki')->required(),
             ]);
     }
 }
