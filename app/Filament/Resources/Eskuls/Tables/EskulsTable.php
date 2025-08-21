@@ -19,7 +19,7 @@ class EskulsTable
                  ImageColumn::make('foto')->visibility('public')->circular(),
                 TextColumn::make('nama_eskul')->searchable(),
                 TextColumn::make('jadwal')->searchable(),
-                Textarea::make('detail')->searchable(),
+                TextColumn::make('detail')->searchable(),
             ])
             ->filters([
                 //
