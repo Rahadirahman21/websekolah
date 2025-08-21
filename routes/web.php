@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [UserController::class, 'index'])->name('welcome');
+Route::get('/admin')->name('admin');
 Route::get('/profil', [UserController::class, 'profilIndex'])->name('profil');
 Route::get('/jurusan', [UserController::class, 'jurusanIndex'])->name('jurusan');
 Route::get('/eskul', [UserController::class, 'eskulIndex'])->name('eskul');

@@ -14,9 +14,11 @@ class RombelsForm
             ->components([
                Select::make('jurusan')
                 ->options([
-                    'ruang_kelas' => 'Ruang Kelas',
-                    'ruang_praktik' => 'Ruang Praktik',
-                    'ruang_penunjang' => 'Ruang Penunjang',
+                    'PPLG' => 'PPLG',
+                    'TJKT' => 'TJKT',
+                    'TBSM' => 'TBSM',
+                    'TOI' => 'TOI',
+                    'DKV' => 'DKV',
                 ]),
                 TextInput::make('nama_kelas')->required(),
                 TextInput::make('jml_perempuan')->required(),
