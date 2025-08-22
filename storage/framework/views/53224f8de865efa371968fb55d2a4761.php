@@ -40,29 +40,30 @@
   </div>
 </div>
     
-</section>
-<section >
-    <div class="flex items-center justify-center my-5">
-        <h1 class="text-center font-bold text-2xl font">Ekstrakulikuler SMKN 4 Tasikmalaya</h1>
-    </div>
-    <div class="flex justify-center gap-10 my-10">
-
-        <?php $__currentLoopData = $jurusan; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $jurusan): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <div class="card bg-blue-100 w-96 shadow-sm ">
-            <figure>
-                <img src="<?php echo e(asset('storage/'. $jurusan->foto)); ?>" alt="" width="100px" class=" rounded-full my-5">
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title"><?php echo e($jurusan->nama_jurusan); ?></h2>
-                <p><?php echo e($jurusan->pengertian); ?></p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Selengkapnya</button>
+<section class="relative py-12 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
+    <h1 class="text-center font-bold text-2xl mb-8">Ekstrakulikuler SMKN 4 Tasikmalaya</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <?php $__currentLoopData = $eskul; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $eskul): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="card bg-gray-700 shadow-lg rounded-lg overflow-hidden">
+                <div class="h-56 w-full overflow-hidden">
+                    <img src="<?php echo e(asset('storage/' . $eskul->foto)); ?>" alt="<?php echo e($eskul->nama_eskul); ?>" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="card-body p-4">
+                    <h2 class="card-title text-lg font-semibold mb-2"><?php echo e($eskul->nama_eskul); ?></h2>
+                    <p class="text-sm mb-1">Jadwal: <?php echo e($eskul->jadwal); ?></p>
+                    <p class="text-gray-300 text-sm mb-4"><?php echo e(Str::limit($eskul->detail, 80)); ?></p>
+                    
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition">
+                            Selengkapnya
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
-
 </section>
+
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.layout', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\laragon\www\websekolah\resources\views/eskul.blade.php ENDPATH**/ ?>

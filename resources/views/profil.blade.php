@@ -43,5 +43,7 @@
 </div>
     </div>
 </section>
-<h1>Halaman Profil</h1>
+<section>
+  
+</section>
 @endsection

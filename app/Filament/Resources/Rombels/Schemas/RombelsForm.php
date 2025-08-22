@@ -14,11 +14,11 @@ class RombelsForm
             ->components([
                Select::make('jurusan')
                 ->options([
-                    'PPLG' => 'PPLG',
-                    'TJKT' => 'TJKT',
-                    'TBSM' => 'TBSM',
-                    'TOI' => 'TOI',
-                    'DKV' => 'DKV',
+                    'PENGEMBANGAN PERANGKAT LUNAK DAN GIM' => 'PENGEMBANGAN PERANGKAT LUNAK DAN GIM',
+                    'TENIK JARINGAN KOMPUTER DAN TELEKOMUNIKASI' => 'TENIK JARINGAN KOMPUTER DAN TELEKOMUNIKASI',
+                    'TEKNIK BISNIS SEPEDAH MOTOR' => 'TEKNIK BISNIS SEPEDAH MOTOR',
+                    'TEKNIK OTOMASI INDUSTRI' => 'TEKNIK OTOMASI INDUSTRI',
+                    'DESAIN KOMUNIKASI VISUAL' => 'DESAIN KOMUNIKASI VISUAL',
                 ]),
                 TextInput::make('nama_kelas')->required(),
                 TextInput::make('jml_perempuan')->required(),

@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Eskuls\Pages;
 
 use App\Filament\Resources\Eskuls\EskulsResource;
+use Filament\Actions\CreateAction;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 
@@ -14,6 +15,7 @@ class EditEskuls extends EditRecord
     {
         return [
             DeleteAction::make(),
+            CreateAction::make(),
         ];
     }
 }

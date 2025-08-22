@@ -43,28 +43,30 @@
 </div>
     
 </section>
-<section >
+<section class="relative py-12 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
     <div class="flex items-center justify-center my-5">
-        <h1 class="text-center font-bold text-2xl font">Rombongan Belajar SMKN 4 Tasikmalaya</h1>
+        <h1 class="text-center font-bold text-2xl">Rombongan Belajar SMKN 4 Tasikmalaya</h1>
     </div>
-    <div class="flex justify-center gap-10 my-10">
-
-        @foreach ($rombel as $rombel)
-        <div class="card bg-blue-100 w-96 shadow-sm ">
-            {{-- <figure>
-                <img src="{{ asset('storage/'. $jurusan->foto) }}" alt="" width="100px" class=" rounded-full my-5">
-            </figure> --}}
-            <div class="card-body">
-                <h2 class="card-title">{{ $rombel->nama_kelas }}</h2>
-                <p>{{ $rombel->jml_perempuan }}</p>
-                <p>{{ $rombel->jml_laki_laki }}</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Selengkapnya</button>
+    @foreach ($rombels as $jurusan => $listRombel)
+        <h2 class="text-xl font-semibold my-4 ms-10">{{ $jurusan }}</h2>
+        <div class="flex justify-center gap-10 my-10 flex-wrap">
+            @foreach ($listRombel as $rombel)
+                <div class="card bg-gray-700 w-96 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title font-drak">{{ $rombel->nama_kelas }}</h2>
+                        <p>Anggota Rombel : {{ $rombel->jml_perempuan + $rombel->jml_laki_laki }}</p>
+                        <p>Perempuan : {{ $rombel->jml_perempuan }}</p>
+                        <p>Laki - Laki : {{ $rombel->jml_laki_laki }}</p>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Selengkapnya</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            @endforeach
         </div>
-        @endforeach
-    </div>
-
+    @endforeach
 </section>
+
+
+
 @endsection

@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
 <section>
-    <div class="h-100 bg-blue-500">
+    <div class=" bg-blue-500">
         <div class="carousel w-full">
   <div id="slide1" class="carousel-item relative w-full">
     <img
@@ -41,7 +41,24 @@
 </div>
     </div>
 </section>
-<section>
+<section class="bg-blue-500">
+  <div class="container mx-auto px-4 py-10 ">
+    <div class="bg-white shadow-lg rounded-lg p-6 md:p-10 flex flex-col md:flex-row gap-6 items-center">
+      
+      <div class="md:w-1/2 flex justify-center">
+        <img src="foto.jpg" alt="Kepala Sekolah" class="rounded-lg w-full max-w-sm object-cover">
+      </div>
+      <div class="md:w-1/2">
+        <h3 class="text-blue-500 font-semibold text-lg mb-2">Sambutan Kepala Sekolah</h3>
+        <h2 class="text-gray-800 font-bold text-2xl md:text-3xl mb-4">Kurniawan,S.pd M.pd.</h2>
+      </div>
+      
+    </div>
+  </div>
 </section>
+<section>
+  
+</section>
+
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.layout', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\laragon\www\websekolah\resources\views/welcome.blade.php ENDPATH**/ ?>
