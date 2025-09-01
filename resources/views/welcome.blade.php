@@ -1,65 +1,85 @@
 @extends('layouts.layout')
 
 @section('content')
+@foreach ($setting as $s)
 <section>
-    <div class=" bg-blue-500">
-        <div class="carousel w-full">
-  <div id="slide1" class="carousel-item relative w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-      class="w-full" />
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide4" class="btn btn-circle">❮</a>
-      <a href="#slide2" class="btn btn-circle">❯</a>
-    </div>
-  </div>
-  <div id="slide2" class="carousel-item relative w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-      class="w-full" />
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide1" class="btn btn-circle">❮</a>
-      <a href="#slide3" class="btn btn-circle">❯</a>
-    </div>
-  </div>
-  <div id="slide3" class="carousel-item relative w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-      class="w-full" />
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide2" class="btn btn-circle">❮</a>
-      <a href="#slide4" class="btn btn-circle">❯</a>
-    </div>
-  </div>
-  <div id="slide4" class="carousel-item relative w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-      class="w-full" />
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide3" class="btn btn-circle">❮</a>
-      <a href="#slide1" class="btn btn-circle">❯</a>
-    </div>
-  </div>
-</div>
+  <div class="flex flex-col items-center justify-center my-5">
+        <h1 class="text-center font-bold text-2xl font">Selamat Datang</h1>
+        <h1 class="text-center font-bold text-2xl font my-5">{{ $s->nama_sekolah }}</h1>
+        <h1 class="text-center font-bold text-2xl font">SMK Pusat Keunggulan</h1>
     </div>
 </section>
-<section class="bg-blue-500">
+  
+<section class="b">
   <div class="container mx-auto px-4 py-10 ">
     <div class="bg-white shadow-lg rounded-lg p-6 md:p-10 flex flex-col md:flex-row gap-6 items-center">
       
       <div class="md:w-1/2 flex justify-center">
-        <img src="foto.jpg" alt="Kepala Sekolah" class="rounded-lg w-full max-w-sm object-cover">
+        <img src="{{ asset('storage/'. $s->foto) }}" alt="Kepala Sekolah" class="rounded-lg w-full max-w-sm object-cover">
       </div>
       <div class="md:w-1/2">
         <h3 class="text-blue-500 font-semibold text-lg mb-2">Sambutan Kepala Sekolah</h3>
-        <h2 class="text-gray-800 font-bold text-2xl md:text-3xl mb-4">Kurniawan,S.pd M.pd.</h2>
+        <h2 class="text-gray-800 font-bold text-2xl md:text-3xl mb-4">{{ $s->nama_kepsek }}</h2>
+        <h2>{{ $s->sambutan }}</h2>
       </div>
-      
     </div>
   </div>
 </section>
-<section>
-  
+@endforeach
+<section class="relative py-12 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
+  <div class="flex items-center justify-center my-5">
+        <h1 class="text-center font-bold text-2xl font">Statistik SMKN 4 Tasikmalaya</h1>
+    </div>
+    <div class="flex justify-center gap-15 my-20 flex-wrap">
+        <div class="card bg-gray-700 w-75 shadow-lg   my-10 transform transition duration-300 hover:scale-105 hover:shadow-2xl ">
+            <div class="card-body ">
+                <h2 class="card-title">Guru</h2>
+                  <h1 class="text-2xl font-bold">{{ $jml_guru }}</h1>
+            </div>
+        </div>
+        <div class="card bg-gray-700 w-75 shadow-lg  my-10 transform transition duration-300 hover:scale-105 hover:shadow-2xl ">
+            <div class="card-body ">
+                <h2 class="card-title">Siswa</h2>
+                <h1 class="text-2xl font-bold">1500</h1>
+            </div>
+        </div>
+        <div class="card bg-gray-700 w-75 shadow-lg  my-10 transform transition duration-300 hover:scale-105 hover:shadow-2xl ">
+            <div class="card-body ">
+                <h2 class="card-title">Konsentrasi Keahlian</h2>
+                <h1 class="text-2xl font-bold">{{ $jml_jurusan }}</h1>
+            </div>
+        </div>
+        <div class="card bg-gray-700 w-75 shadow-lg  my-10 transform transition duration-300 hover:scale-105 hover:shadow-2xl ">
+            <div class="card-body ">
+                <h2 class="card-title">Ekstrakulikuler</h2>
+                <h1 class="text-2xl font-bold">{{ $jml_eskul }}</h1>
+            </div>
+        </div>
+        <div class="card bg-gray-700 w-75 shadow-lg  my-10 transform transition duration-300 hover:scale-105 hover:shadow-2xl ">
+            <div class="card-body ">
+                <h2 class="card-title">Rombongan Belajar</h2>
+                <h1 class="text-2xl font-bold">{{ $jml_rombel }}</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="b">
+    <div class="flex items-center justify-center my-5">
+        <h1 class="text-center font-bold text-4xl font">Berita SMKN 4 Tasikmalaya</h1>
+    </div>
+    <div class="flex justify-center gap-15 flex-wrap">
+        @foreach ($berita as $berita)
+        <div class="card bg-gray-700 w-96 shadow-lg  md:w-1/4 my-10 transform transition duration-300 hover:scale-105 hover:shadow-2xl ">
+            <figure>
+                <img src="{{ asset('storage/'. $berita->foto) }}" alt="" width="100px" class="w-full h-full object-cover">
+            </figure>
+            <div class="card-body text-white">
+              <p class="text-sm">{{ $berita->tanggal }}</p>
+                <h2 class="card-title mt-1">{{ $berita->detail }}</h2>
+            </div>
+        </div>
+        @endforeach
+    </div>
 </section>
 
 @endsection

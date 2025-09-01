@@ -2,24 +2,34 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Beritas;
 use App\Models\Eskuls;
+use App\Models\Guru;
 use App\Models\Jurusans;
 use App\Models\Profils;
 use App\Models\Rombels;
 use App\Models\Sarpras;
+use App\Models\Settings;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
     public function index()
     {
+        $jml_guru = Guru::count();
+        $jml_jurusan = Jurusans::count();
+        $jml_eskul = Eskuls::count();
+        $jml_rombel = Rombels::count();
+        $guru = Guru::get();
+        $berita = Beritas::get();
+        $setting = Settings::get();
         $profil = Profils::first()->get(); 
         $eskul = Eskuls::all();
         $jurusan = Jurusans::all();
         $rombel = Rombels::all();
         $sarpras = Sarpras::all();
 
-        return view('welcome', compact('profil','eskul','jurusan','rombel','sarpras'));
+        return view('welcome', compact('jml_rombel','jml_eskul','jml_jurusan','jml_guru','guru','berita','setting','profil','eskul','jurusan','rombel','sarpras'));
     }
 
     public function profilIndex()

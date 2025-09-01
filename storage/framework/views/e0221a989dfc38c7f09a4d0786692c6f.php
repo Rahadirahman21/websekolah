@@ -9,47 +9,30 @@
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
+  <style>
+  .b{
+    background: url(https://smkn4tsm-frida.vercel.app/_nuxt/background.D5LpaZoT.png) no-repeat top fixed;
+    background-size: cover;
+    padding-top: 5rem;
+    position: relative;
+    width: 100%;
+  }
+</style>
     <?php $__currentLoopData = $profil; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $profil): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-    <header class="bg-gray-800">
-        <nav class="container mx-auto px-6 py-3">
-          <div class="flex items-center justify-between">
-            <div class="text-white font-bold text-xl">
-              <a href="#">
-                <div class="flex items-center">
-                    <img src="<?php echo e(asset('storage/'. $profil->logo)); ?>" alt="" width="50px" class=" rounded-full">
-                    <h1 class="ms-4"><?php echo e($profil->nama_sekolah); ?></h1>
-                </div>
-              </a>
-            </div>
-            <div class="hidden md:block">
-              <ul class="flex items-center space-x-8">
-                <li><a href="<?php echo e(route('welcome')); ?>" class="text-white">Home</a></li>
-                <li><a href="<?php echo e(route('profil')); ?>" class="text-white">Profil</a></li>
-                <li><a href="<?php echo e(route('jurusan')); ?>" class="text-white">Kompetensi Keahlian</a></li>
-                <li><a href="<?php echo e(route('sarpras')); ?>" class="text-white">Sarana Prasarana</a></li>
-                <li><a href="<?php echo e(route('eskul')); ?>" class="text-white">Ekstrakulikuler</a></li>
-                <li><a href="<?php echo e(route('rombel')); ?>" class="text-white">Rombongan Belajar</a></li>
-              </ul>
-            </div>
-            <div class="md:hidden">
-              <button class="outline-none mobile-menu-button">
-                <svg class="w-6 h-6 text-white" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="mobile-menu hidden md:hidden">
-            <ul class="mt-4 space-y-4">
-              <li><a href="<?php echo e(route('welcome')); ?>" class="block px-4 py-2 text-white bg-gray-900 rounded">Home</a></li>
-              <li><a href="<?php echo e(route('profil')); ?>" class="block px-4 py-2 text-white bg-gray-900 rounded">Profil</a></li>
-              <li><a href="<?php echo e(route('jurusan')); ?>" class="block px-4 py-2 text-white bg-gray-900 rounded">Kompetensi Keahlian</a></li>
-              <li><a href="<?php echo e(route('eskul')); ?>" class="block px-4 py-2 text-white bg-gray-900 rounded">Ekstrakulikuler</a></li>
-            </ul>
-          </div>
-          
-        </nav>
-      </header>
+    <header class="border-b border-gray-200/70 dark:border-white/10 sticky top-0 backdrop-blur supports-[backdrop-filter]:bg-white/70 supports-[backdrop-filter]:dark:bg-gray-950/60 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <img src="<?php echo e(asset('storage/'. $profil->logo)); ?>" alt="" width="50px" class=" rounded-full">
+      <a href="#" class="font-bold tracking-tight text-xl"><?php echo e($profil->nama_sekolah); ?></a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="<?php echo e(route('welcome')); ?>" class="hover:text-indigo-600 link-underline">Beranda</a>
+        <a href="<?php echo e(route('profil')); ?>" class="hover:text-indigo-600 link-underline">Profil</a>
+        <a href="<?php echo e(route('jurusan')); ?>" class="hover:text-indigo-600 link-underline">Kompetensi Keahlian</a>
+        <a href="<?php echo e(route('sarpras')); ?>" class="hover:text-indigo-600 link-underline">Sarana Prasarana</a>
+        <a href="<?php echo e(route('eskul')); ?>" class="hover:text-indigo-600 link-underline">Ekstrakulikuler</a>
+        <a href="<?php echo e(route('rombel')); ?>" class="hover:text-indigo-600 link-underline">Rombongan Belajar</a>
+      </nav>
+    </div>
+  </header>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     <div>
         <?php echo $__env->yieldContent('content'); ?>
@@ -58,60 +41,33 @@
     <section>
       <footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
   <aside>
-    <svg
-      width="50"
-      height="50"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      class="fill-current">
-      <path
-        d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
-    </svg>
+      <img src="<?php echo e(asset('storage/'. $profil->logo)); ?>" alt="" width="50px" class=" rounded-full">
     <p>
-      ACME Industries Ltd.
+      <?php echo e($profil->nama_sekolah); ?>
+
       <br />
       Providing reliable tech since 1992
     </p>
   </aside>
   <nav>
-    <h6 class="footer-title">Services</h6>
-    <a class="link link-hover">Branding</a>
-    <a class="link link-hover">Design</a>
-    <a class="link link-hover">Marketing</a>
-    <a class="link link-hover">Advertisement</a>
+    <h6 class="footer-title">Alamat</h6>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.2131636317426!2d108.25189907404213!3d-7.32993997208793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f59eeb6bda36f%3A0xa9e724a275da6c2d!2sSMK%20Negeri%204%20Tasikmalaya!5e0!3m2!1sid!2sid!4v1734660682140!5m2!1sid!2sid" frameborder="0"></iframe>
+
   </nav>
   <nav>
-    <h6 class="footer-title">Company</h6>
+    <h6 class="footer-title">Kontak</h6>
     <a class="link link-hover">About us</a>
     <a class="link link-hover">Contact</a>
     <a class="link link-hover">Jobs</a>
     <a class="link link-hover">Press kit</a>
   </nav>
-  <nav>
-    <h6 class="footer-title">Legal</h6>
-    <a class="link link-hover">Terms of use</a>
-    <a class="link link-hover">Privacy policy</a>
-    <a class="link link-hover">Cookie policy</a>
-  </nav>
+  
 </footer>
     </section>
     <footer>
       <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4">
-  <aside class="grid-flow-col items-center">
-    <svg
-      width="36"
-      height="36"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      class="fill-current">
-      <path
-        d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
-    </svg>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+  <aside class="grid-flow-col items-center ">
+    <p>Copyright © 2025 - All right reserved</p>
   </aside>
   <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
     <a>

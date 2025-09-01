@@ -1,46 +1,35 @@
 <?php $__env->startSection('content'); ?>
-<section>
-    <div class="h-100 bg-blue-500">
-        <div class="carousel w-full">
-  <div id="slide1" class="carousel-item relative w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-      class="w-full" />
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide4" class="btn btn-circle">❮</a>
-      <a href="#slide2" class="btn btn-circle">❯</a>
+<?php $__currentLoopData = $profil; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+<section class="b">
+  <div class="container mx-auto px-4 py-10 ">
+    <div class="bg-white shadow-lg rounded-lg p-6 md:p-10 flex flex-col md:flex-row gap-6 items-center">
+      <div class="w-full">
+        <h3 class="text-blue-500 font-bold text-2xl mb-2">SEJARAH</h3>
+        <p class="text-gray-800  mb-4"><?php echo e($p->sejarah); ?></p>
+      </div>
     </div>
   </div>
-  <div id="slide2" class="carousel-item relative w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-      class="w-full" />
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide1" class="btn btn-circle">❮</a>
-      <a href="#slide3" class="btn btn-circle">❯</a>
+  <div class="container mx-auto px-4 py-10 ">
+    <div class="bg-white shadow-lg rounded-lg p-6 md:p-10 flex flex-col md:flex-row gap-6 items-center">
+      <div class="w-full">
+        <h3 class="text-blue-500 font-bold text-2xl mb-2">Visi</h3>
+        <h2 class="text-gray-800 mb-4"><?php echo e($p->visi); ?></h2>
+        <h2></h2>
+      </div>
     </div>
   </div>
-  <div id="slide3" class="carousel-item relative w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-      class="w-full" />
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide2" class="btn btn-circle">❮</a>
-      <a href="#slide4" class="btn btn-circle">❯</a>
+  <div class="container mx-auto px-4 py-10 ">
+    <div class="bg-white shadow-lg rounded-lg p-6 md:p-10 flex flex-col md:flex-row gap-6 items-center">
+      <div class="w-full">
+        <h3 class="text-blue-500 font-bold text-2xl mb-2">Misi</h3>
+        <h2 class=""><?php echo e($p->misi); ?></h2>
+        <h2></h2>
+      </div>
     </div>
   </div>
-  <div id="slide4" class="carousel-item relative w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-      class="w-full" />
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide3" class="btn btn-circle">❮</a>
-      <a href="#slide1" class="btn btn-circle">❯</a>
-    </div>
-  </div>
-</div>
-    </div>
 </section>
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
 <section>
   
 </section>
