@@ -15,7 +15,9 @@
       <div class="md:w-1/2">
         <h3 class="text-blue-500 font-semibold text-lg mb-2">Sambutan Kepala Sekolah</h3>
         <h2 class="text-gray-800 font-bold text-2xl md:text-3xl mb-4"><?php echo e($s->nama_kepsek); ?></h2>
+        <h1>Assalamualaikum Warahmatullahi Wabarakatuh</h1>
         <h2><?php echo e($s->sambutan); ?></h2>
+        <h1>Wassalamu'alaikum Warahmatullahi Wabarakatuh</h1>
       </div>
     </div>
   </div>
