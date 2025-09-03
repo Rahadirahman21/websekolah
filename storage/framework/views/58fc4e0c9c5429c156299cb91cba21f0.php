@@ -1,22 +1,22 @@
 <?php $__env->startSection('content'); ?>
 
-<section class="relative py-12 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
-    <div class="flex items-center justify-center my-5">
-        <h1 class="text-center font-bold text-2xl">Rombongan Belajar SMKN 4 Tasikmalaya</h1>
+<section class="b">
+    <div class="flex items-center justify-center py-10 ">
+        <h1 class="text-center font-bold text-2xl bg-black w-130 text-white py-5 rounded-md shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-2xl">Sarana Prasarana  SMKN 4 Tasikmalaya</h1>
     </div>
-    <?php $__currentLoopData = $rombels; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $jurusan => $listRombel): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <h2 class="text-xl font-semibold my-4 ms-10"><?php echo e($jurusan); ?></h2>
+    <?php $__currentLoopData = $sarpras; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $jenis => $listSarpras): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+    <div class="bg-black">
+        <h2 class="text-xl font-semibold py-5 text-white ms-10"><?php echo e($jenis); ?></h2>
+    </div>
         <div class="flex justify-center gap-10 my-10 flex-wrap">
-            <?php $__currentLoopData = $listRombel; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $rombel): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <div class="card bg-gray-700 w-96 shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-                    <div class="card-body">
-                        <h2 class="card-title font-drak"><?php echo e($rombel->nama_kelas); ?></h2>
-                        <p>Anggota Rombel : <?php echo e($rombel->jml_perempuan + $rombel->jml_laki_laki); ?></p>
-                        <p>Perempuan : <?php echo e($rombel->jml_perempuan); ?></p>
-                        <p>Laki - Laki : <?php echo e($rombel->jml_laki_laki); ?></p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Selengkapnya</button>
-                        </div>
+            <?php $__currentLoopData = $listSarpras; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sarpras): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="card bg-black w-96 shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                    <div class="h-56 w-full overflow-hidden">
+                    <img src="<?php echo e(asset('storage/' . $sarpras->foto)); ?>" alt="<?php echo e($sarpras->nama_tempat); ?>" 
+                         class="w-full h-full object-cover">
+                </div>
+                    <div class="card-body text-white">
+                        <h2 class="card-title font-drak"><?php echo e($sarpras->nama_tempat); ?></h2>
                     </div>
                 </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

@@ -2,10 +2,12 @@
 
   
 <section class="b">
-    <h1 class="text-center font-bold text-2xl mb-8">Ekstrakulikuler SMKN 4 Tasikmalaya</h1>
+    <div class="flex items-center justify-center py-10">
+        <h1 class="text-center font-bold text-2xl bg-black w-130 text-white py-5 rounded-md shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-2xl">Ekstrakulikuler SMKN 4 Tasikmalaya</h1>
+    </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <?php $__currentLoopData = $eskul; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $eskul): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="card bg-gray-700 shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+            <div class="card bg-black shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
                 <div class="h-56 w-full overflow-hidden">
                     <img src="<?php echo e(asset('storage/' . $eskul->foto)); ?>" alt="<?php echo e($eskul->nama_eskul); ?>" 
                          class="w-full h-full object-cover">

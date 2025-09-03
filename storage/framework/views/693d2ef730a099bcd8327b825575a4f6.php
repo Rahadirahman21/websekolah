@@ -5,14 +5,16 @@
     
 </section>
 <section class="b">
-    <div class="flex items-center justify-center my-5">
-        <h1 class="text-center font-bold text-2xl">Rombongan Belajar SMKN 4 Tasikmalaya</h1>
+    <div class="flex items-center justify-center py-10">
+        <h1 class="text-center font-bold text-2xl bg-black w-130 text-white py-5 rounded-md shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-2xl">Rombongan Belajar SMKN 4 Tasikmalaya</h1>
     </div>
     <?php $__currentLoopData = $rombels; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $jurusan => $listRombel): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <h2 class="text-xl font-semibold my-4 ms-10"><?php echo e($jurusan); ?></h2>
-        <div class="flex justify-center gap-10 my-10 flex-wrap">
+<div class="bg-black">
+        <h2 class="text-xl font-semibold py-5 text-white ms-10"><?php echo e($jurusan); ?></h2>
+    </div>
+            <div class="flex justify-center gap-10 my-10 flex-wrap">
             <?php $__currentLoopData = $listRombel; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $rombel): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <div class="card bg-gray-700 w-96 shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                <div class="card bg-black w-96 shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-2xl">
                     <div class="card-body text-white">
                         <h2 class="card-title font-drak"><?php echo e($rombel->nama_kelas); ?></h2>
                         <p>Anggota Rombel : <?php echo e($rombel->jml_perempuan + $rombel->jml_laki_laki); ?></p>

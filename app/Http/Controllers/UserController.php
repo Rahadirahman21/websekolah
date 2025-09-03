@@ -84,7 +84,8 @@ class UserController extends Controller
         $jurusan = Jurusans::all();
         $rombel = Rombels::all();
         $sarpras = Sarpras::all();
+        $sarpras = Sarpras::all()->groupBy('jenis'); // Group by field 'jurusan'
 
-        return view('sarpras', compact('profil','eskul','jurusan','rombel','sarpras'));
+        return view('sarpras', compact('sarpras','profil','eskul','jurusan','rombel','sarpras'));
     }
 }

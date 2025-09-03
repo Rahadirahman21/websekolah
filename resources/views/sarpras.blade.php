@@ -2,23 +2,23 @@
 
 @section('content')
 
-<section class="relative py-12 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
-    <div class="flex items-center justify-center my-5">
-        <h1 class="text-center font-bold text-2xl">Rombongan Belajar SMKN 4 Tasikmalaya</h1>
+<section class="b">
+    <div class="flex items-center justify-center py-10 ">
+        <h1 class="text-center font-bold text-2xl bg-black w-130 text-white py-5 rounded-md shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-2xl">Sarana Prasarana  SMKN 4 Tasikmalaya</h1>
     </div>
-    @foreach ($rombels as $jurusan => $listRombel)
-        <h2 class="text-xl font-semibold my-4 ms-10">{{ $jurusan }}</h2>
+    @foreach ($sarpras as $jenis => $listSarpras)
+    <div class="bg-black">
+        <h2 class="text-xl font-semibold py-5 text-white ms-10">{{ $jenis }}</h2>
+    </div>
         <div class="flex justify-center gap-10 my-10 flex-wrap">
-            @foreach ($listRombel as $rombel)
-                <div class="card bg-gray-700 w-96 shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-                    <div class="card-body">
-                        <h2 class="card-title font-drak">{{ $rombel->nama_kelas }}</h2>
-                        <p>Anggota Rombel : {{ $rombel->jml_perempuan + $rombel->jml_laki_laki }}</p>
-                        <p>Perempuan : {{ $rombel->jml_perempuan }}</p>
-                        <p>Laki - Laki : {{ $rombel->jml_laki_laki }}</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Selengkapnya</button>
-                        </div>
+            @foreach ($listSarpras as $sarpras)
+                <div class="card bg-black w-96 shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                    <div class="h-56 w-full overflow-hidden">
+                    <img src="{{ asset('storage/' . $sarpras->foto) }}" alt="{{ $sarpras->nama_tempat }}" 
+                         class="w-full h-full object-cover">
+                </div>
+                    <div class="card-body text-white">
+                        <h2 class="card-title font-drak">{{ $sarpras->nama_tempat }}</h2>
                     </div>
                 </div>
             @endforeach

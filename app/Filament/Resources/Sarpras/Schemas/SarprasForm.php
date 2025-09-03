@@ -15,9 +15,9 @@ class SarprasForm
             ->components([
                 Select::make('jenis')
                 ->options([
-                    'ruang_kelas' => 'Ruang Kelas',
-                    'ruang_praktik' => 'Ruang Praktik',
-                    'ruang_penunjang' => 'Ruang Penunjang',
+                    'Ruang Kelas' => 'Ruang Kelas',
+                    'Ruang Praktik' => 'Ruang Praktik',
+                    'Ruang Penunjang' => 'Ruang Penunjang',
                 ]),
                 FileUpload::make('foto')->required()->disk('public')->directory('photos'),
                 TextInput::make('nama_tempat')->required(),
