@@ -24,9 +24,9 @@
                 <nav class="hidden md:flex items-center gap-6 text-sm">
                     <a href="<?php echo e(route('welcome')); ?>" class="hover:text-indigo-600 link-underline">Beranda</a>
                     <a href="<?php echo e(route('profil')); ?>" class="hover:text-indigo-600 link-underline">Profil</a>
-                    <a href="<?php echo e(route('jurusan')); ?>" class="hover:text-indigo-600 link-underline">Kompetensi
-                        Keahlian</a>
+                    <a href="<?php echo e(route('jurusan')); ?>" class="hover:text-indigo-600 link-underline">Kompetensi Keahlian</a>
                     <a href="<?php echo e(route('sarpras')); ?>" class="hover:text-indigo-600 link-underline">Sarana Prasarana</a>
+                    <a href="<?php echo e(route('guru')); ?>" class="hover:text-indigo-600 link-underline">Pegawai</a>
                     <a href="<?php echo e(route('eskul')); ?>" class="hover:text-indigo-600 link-underline">Ekstrakulikuler</a>
                     <a href="<?php echo e(route('rombel')); ?>" class="hover:text-indigo-600 link-underline">Rombongan Belajar</a>
                     <a href="<?php echo e(url('/admin/login')); ?>"

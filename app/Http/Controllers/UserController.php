@@ -90,4 +90,17 @@ class UserController extends Controller
 
         return view('sarpras', compact('sarpras','profil','eskul','jurusan','rombel','sarpras'));
     }
+    public function guruIndex()
+    {
+        $profil = Profils::first()->get();
+        $eskul = Eskuls::all();
+        $guru = Guru::all();
+        $jurusan = Jurusans::all();
+        $rombel = Rombels::all();
+        $sarpras = Sarpras::all();
+        $sarpras = Sarpras::all()->groupBy('jenis'); // Group by field 'jurusan'
+        $gurus = Guru::all()->groupBy('jabatan'); // Group by field 'jurusan'
+
+        return view('guru', compact('gurus','guru','sarpras','profil','eskul','jurusan','rombel','sarpras'));
+    }
 }

@@ -24,9 +24,9 @@
                 <nav class="hidden md:flex items-center gap-6 text-sm">
                     <a href="{{ route('welcome') }}" class="hover:text-indigo-600 link-underline">Beranda</a>
                     <a href="{{ route('profil') }}" class="hover:text-indigo-600 link-underline">Profil</a>
-                    <a href="{{ route('jurusan') }}" class="hover:text-indigo-600 link-underline">Kompetensi
-                        Keahlian</a>
+                    <a href="{{ route('jurusan') }}" class="hover:text-indigo-600 link-underline">Kompetensi Keahlian</a>
                     <a href="{{ route('sarpras') }}" class="hover:text-indigo-600 link-underline">Sarana Prasarana</a>
+                    <a href="{{ route('guru') }}" class="hover:text-indigo-600 link-underline">Pegawai</a>
                     <a href="{{ route('eskul') }}" class="hover:text-indigo-600 link-underline">Ekstrakulikuler</a>
                     <a href="{{ route('rombel') }}" class="hover:text-indigo-600 link-underline">Rombongan Belajar</a>
                     <a href="{{ url('/admin/login') }}"
