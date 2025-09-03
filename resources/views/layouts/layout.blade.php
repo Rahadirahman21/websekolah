@@ -5,34 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>SMKN 4 Tasikmalaya</title>
+    <link rel="icon" type="image/png" href="{{ asset('storage/coba/n4_icon.png') }}">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
     <style>
-        .bg {
-            background-image: url({{ asset('storage/coba/y.JPG') }});
-            background-size: cover;
-            /* supaya menutupi seluruh area */
-            background-position: center;
-            /* posisi di tengah */
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 80vh;
-            /* tinggi layar penuh */
-        }
-
-        .bg {
-            background: url(https://photos.google.com/share/AF1QipOK48BZS2Y1rSFxjwKOV06a8kMqAyBNfQGBUvUXksQnSJcKSJ573DqXHG7bHv9M2A/photo/AF1QipO4baFZN5TVUSNVlKAHrIzoh8swji7nSyr4kMx2?key=VlNubzV3ZEh5OTBIMnBKY1BFOHBpdjdHVkRqQVln) width: 100%;
-        }
-
-        .b {
-            background: url(https://smkn4tsm-frida.vercel.app/_nuxt/background.D5LpaZoT.png) no-repeat top fixed;
-            background-size: cover;
-            position: relative;
-        }
+        
     </style>
     @foreach ($profil as $profil)
         <header
@@ -48,6 +29,10 @@
                     <a href="{{ route('sarpras') }}" class="hover:text-indigo-600 link-underline">Sarana Prasarana</a>
                     <a href="{{ route('eskul') }}" class="hover:text-indigo-600 link-underline">Ekstrakulikuler</a>
                     <a href="{{ route('rombel') }}" class="hover:text-indigo-600 link-underline">Rombongan Belajar</a>
+                    <a href="{{ url('/admin/login') }}"
+                        class="px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
+                        Login
+                    </a>
                 </nav>
             </div>
         </header>

@@ -2,9 +2,9 @@
 
 @section('content')
 
-<section class="b">
+<section class="">
     <div class="flex items-center justify-center py-10 ">
-        <h1 class="text-center font-bold text-2xl bg-black w-130 text-white py-5 rounded-md shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-2xl">Sarana Prasarana  SMKN 4 Tasikmalaya</h1>
+        <h1 class="text-center font-bold text-2xl bg-black w-130 text-white py-5 rounded-md shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-4xl">Sarana Prasarana  SMKN 4 Tasikmalaya</h1>
     </div>
     @foreach ($sarpras as $jenis => $listSarpras)
     <div class="bg-black">

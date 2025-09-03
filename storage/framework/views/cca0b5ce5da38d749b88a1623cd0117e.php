@@ -1,11 +1,5 @@
 <?php $__env->startSection('content'); ?>
-
-<section>
-        
-    
-</section>
-
-<section class="b">
+<section class="">
     <div class="flex items-center justify-center py-10">
         <h1 class="text-center font-bold text-2xl bg-black w-130 text-white py-5 rounded-md shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-2xl">Kompetensi Keahlian SMKN 4 Tasikmalaya</h1>
     </div>

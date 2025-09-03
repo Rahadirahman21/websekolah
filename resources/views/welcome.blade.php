@@ -7,7 +7,7 @@
 </section>
 
   
-<section class="b">
+<section class="">
   <div class="container mx-auto px-4 py-10 ">
     <div class="bg-white shadow-lg rounded-lg p-6 md:p-10 flex flex-col md:flex-row gap-6 items-centertransform transition duration-300 hover:scale-105 hover:shadow-2xl ">
       
@@ -36,8 +36,10 @@
         </div>
         <div class="card bg-gray-700 w-75 shadow-lg  my-10 transform transition duration-300 hover:scale-105 hover:shadow-2xl ">
             <div class="card-body ">
+                @foreach ($siswa as $siswa)   
                 <h2 class="card-title">Siswa</h2>
-                <h1 class="text-2xl font-bold">1500</h1>
+                <h1 class="text-2xl font-bold">{{ $siswa->jml_siswa }}</h1>
+                @endforeach
             </div>
         </div>
         <div class="card bg-gray-700 w-75 shadow-lg  my-10 transform transition duration-300 hover:scale-105 hover:shadow-2xl ">
@@ -61,8 +63,8 @@
     </div>
 </section>
 <section class="b">
-    <div class="flex items-center justify-center ">
-        <h1 class="text-center font-bold text-4xl font my-4">Berita SMKN 4 Tasikmalaya</h1>
+    <div class="flex items-center justify-center py-10">
+        <h1 class="text-center font-bold text-2xl bg-black w-130 text-white py-5 rounded-md shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-2xl">Berita SMKN 4 Tasikmalaya</h1>
     </div>
     <div class="flex justify-center gap-15 flex-wrap">
         @foreach ($berita as $berita)

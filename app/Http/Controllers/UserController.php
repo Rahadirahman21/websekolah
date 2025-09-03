@@ -10,6 +10,7 @@ use App\Models\Profils;
 use App\Models\Rombels;
 use App\Models\Sarpras;
 use App\Models\Settings;
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -28,8 +29,9 @@ class UserController extends Controller
         $jurusan = Jurusans::all();
         $rombel = Rombels::all();
         $sarpras = Sarpras::all();
+        $siswa = Siswa::all();
 
-        return view('welcome', compact('jml_rombel','jml_eskul','jml_jurusan','jml_guru','guru','berita','setting','profil','eskul','jurusan','rombel','sarpras'));
+        return view('welcome', compact('siswa','jml_rombel','jml_eskul','jml_jurusan','jml_guru','guru','berita','setting','profil','eskul','jurusan','rombel','sarpras'));
     }
 
     public function profilIndex()
