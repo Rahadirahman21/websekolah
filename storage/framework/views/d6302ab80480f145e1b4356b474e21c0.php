@@ -1,4 +1,25 @@
 <?php $__env->startSection('content'); ?>
+<div class="container mx-auto px-4 py-10">
+  <div class="bg-black shadow-lg rounded-lg p-6 md:p-10">
+    <h2 class="text-blue-500 font-bold text-2xl mb-4">Identitas Sekolah</h2>
+
+    <table class="table-auto w-full text-white ">
+      <tbody>
+        <tr><td class="py-2 px-4 font-semibold">Nama Sekolah</td><td class="py-2 px-4">: <?php echo e($identitas->nama_sekolah); ?></td></tr>
+        <tr><td class="py-2 px-4 font-semibold">NPSN</td><td class="py-2 px-4">: <?php echo e($identitas->npsn); ?></td></tr>
+        <tr><td class="py-2 px-4 font-semibold">Alamat</td><td class="py-2 px-4">: <?php echo e($identitas->alamat); ?></td></tr>
+        <tr><td class="py-2 px-4 font-semibold">Telepon</td><td class="py-2 px-4">: <?php echo e($identitas->telepon); ?></td></tr>
+        <tr><td class="py-2 px-4 font-semibold">Email</td><td class="py-2 px-4">: <?php echo e($identitas->email); ?></td></tr>
+        <tr><td class="py-2 px-4 font-semibold">Tahun Berdiri</td><td class="py-2 px-4">: <?php echo e($identitas->tahun_berdiri); ?></td></tr>
+        <tr><td class="py-2 px-4 font-semibold">No SK</td><td class="py-2 px-4">: <?php echo e($identitas->no_sk); ?></td></tr>
+        <tr><td class="py-2 px-4 font-semibold">Tanggal SK</td><td class="py-2 px-4">: <?php echo e($identitas->tgl_sk); ?></td></tr>
+        <tr><td class="py-2 px-4 font-semibold">Kepemilikan</td><td class="py-2 px-4">: <?php echo e($identitas->kepemilikan); ?></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
 <?php $__currentLoopData = $profil; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 <section class="">
   <div class="container mx-auto px-4 py-10 ">

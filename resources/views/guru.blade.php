@@ -19,6 +19,7 @@
                 </div>
                     <div class="card-body text-white items-center">
                         <h2 class="card-title font-drak ">{{ $gurus->nama }}</h2>
+                        <h2 class="card-title font-drak ">{{ $gurus->bagian }}</h2>
                     </div>
                 </div>
             @endforeach

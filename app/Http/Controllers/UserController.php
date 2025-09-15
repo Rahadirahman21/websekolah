@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Beritas;
 use App\Models\Eskuls;
 use App\Models\Guru;
+use App\Models\Identitas;
 use App\Models\Jurusans;
 use App\Models\Profils;
 use App\Models\Rombels;
@@ -30,8 +31,9 @@ class UserController extends Controller
         $rombel = Rombels::all();
         $sarpras = Sarpras::all();
         $siswa = Siswa::all();
+        $identitas = Identitas::first();
 
-        return view('welcome', compact('siswa','jml_rombel','jml_eskul','jml_jurusan','jml_guru','guru','berita','setting','profil','eskul','jurusan','rombel','sarpras'));
+        return view('welcome', compact('identitas','siswa','jml_rombel','jml_eskul','jml_jurusan','jml_guru','guru','berita','setting','profil','eskul','jurusan','rombel','sarpras'));
     }
 
     public function profilIndex()
@@ -41,8 +43,10 @@ class UserController extends Controller
         $jurusan = Jurusans::all();
         $rombel = Rombels::all();
         $sarpras = Sarpras::all();
+        $identitas = Identitas::first();
 
-        return view('profil', compact('profil','eskul','jurusan','rombel','sarpras'));
+
+        return view('profil', compact('identitas','profil','eskul','jurusan','rombel','sarpras'));
     }
 
     public function eskulIndex()

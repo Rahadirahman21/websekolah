@@ -13,5 +13,6 @@ class Guru extends Model
         'foto',
         'nama',
         'jabatan',
+        'bagian',
     ];
 }

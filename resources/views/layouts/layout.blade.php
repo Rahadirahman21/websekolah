@@ -42,7 +42,7 @@
     </div>
 
     <section>
-        <footer class="footer sm:footer-horizontal bg-gray-900 text-white text-base-content p-10">
+        <footer class="footer sm:footer-horizontal bg-black text-white text-base-content p-10">
             <aside>
                 <img src="{{ asset('storage/' . $profil->logo) }}" alt="" width="50px" class=" rounded-full">
                 <p>
